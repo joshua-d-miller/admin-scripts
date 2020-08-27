@@ -490,7 +490,7 @@ def beautify_admin_accounts():
         beauty_account_image = NSData.dataWithContentsOfFile_(
             admins_to_prepare[beauty_account]['picture_filename'])
         # JPEG Photo (Remove)
-        beauty_account.setValue_forAttribute_error_(
+        beauty_account_node.setValue_forAttribute_error_(
             beauty_account_image, kODAttributeTypeJPEGPhoto, None)
 
 # ----------------------------------------------------------------
@@ -620,7 +620,7 @@ if __name__ == '__main__':
             print('• Bind to EAD', end='\n')
             try:
                 check_output(['/usr/local/bin/jamf', 'policy',
-                              '-event', 'bindtoEAD'], stderr=STDOUT)
+                              '-event', 'fixEADBinding'], stderr=STDOUT)
                 print('  ✓ Completed')
             except CalledProcessError as error:
                 print('  ✖ Unable to bind to Enterprise Active Directory',
