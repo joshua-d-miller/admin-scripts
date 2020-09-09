@@ -533,7 +533,7 @@ if __name__ == '__main__':
     computer_name = build_computer_name()
     local_node, _ = connect_local()
     mwa_address = 'https://your.address.here:portnumber'
-    basic_auth_string_mwa = 'Basic: YourAuthTagHere'
+    basic_auth_string_mwa = 'Basic YourAuthTagHere'
     admin_list = ['admin1', 'admin2']
     admins_to_prepare = {
         admin_list[0]: {
