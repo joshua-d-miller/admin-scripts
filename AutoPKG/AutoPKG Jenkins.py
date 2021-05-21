@@ -75,8 +75,8 @@ def update_autopkg_repos():
         else:
             updated_repos.append(repo.replace(
                 'https://github.com/autopkg/', ''))
-
-    if updated_repos:
+    filter_updated_repos = [var for var in updated_repos if var]
+    if filter_updated_repos:
         repo_update_text = build_bulleted_list(
             'The following repos were updated:', updated_repos)
     else:

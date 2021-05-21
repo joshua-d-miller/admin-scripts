@@ -552,6 +552,9 @@ if __name__ == '__main__':
     # ------------------------------------------------------------
     # The loop to run all our commands or one
     while argv[6] != "exit":
+        # Invoke DEP
+        if argv[4] == "DEP" and argv[5] == "":
+            argv[5] = "computer"
         # Run the Set Computer Name Script
         if argv[5] == "computer":
             try:
